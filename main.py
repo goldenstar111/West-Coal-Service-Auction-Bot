@@ -20,12 +20,14 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service as ChromeService # Similar thing for firefox also!
 from multiprocessing.pool import ThreadPool
 import requests
 import threading
 import platform
 import time
 import socket
+from subprocess import CREATE_NO_WINDOW # This flag will only be available in windows
 
 class MainWidget(QtWidgets.QWidget):
     def __init__(self) -> None:
@@ -54,7 +56,9 @@ class MainWidget(QtWidgets.QWidget):
         # chrome_options.headless = True # also works
         if(my_os == "Windows"):
             # driver = webdriver.Chrome(r'./chromedriver.exe', options=chrome_options)
-            self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
+            chrome_service = ChromeService(ChromeDriverManager().install())
+            chrome_service.creationflags = CREATE_NO_WINDOW
+            self.driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
         else:
             self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
 
