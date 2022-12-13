@@ -1,0 +1,5 @@
+pyqt5
+bs4
+selenium
+webdriver-manager
+auto-py-to-exe
