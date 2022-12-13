@@ -131,6 +131,7 @@ class MainWidget(QtWidgets.QWidget):
                 self.log("Login Success")
                 self.isLogin = True
                 self.scrap_sessions()
+                self.ui.pushButton_5.setEnabled(False)
 
             else:
                 self.log("Login Fail")
