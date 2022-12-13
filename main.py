@@ -27,7 +27,7 @@ import threading
 import platform
 import time
 import socket
-from subprocess import CREATE_NO_WINDOW # This flag will only be available in windows
+from subprocess import CREATE_NO_WINDOW, SW_HIDE # This flag will only be available in windows
 
 class MainWidget(QtWidgets.QWidget):
     def __init__(self) -> None:
@@ -57,7 +57,7 @@ class MainWidget(QtWidgets.QWidget):
         if(my_os == "Windows"):
             # driver = webdriver.Chrome(r'./chromedriver.exe', options=chrome_options)
             chrome_service = ChromeService(ChromeDriverManager().install())
-            chrome_service.creationflags = CREATE_NO_WINDOW
+            chrome_service.creation_flags = CREATE_NO_WINDOW
             self.driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
         else:
             self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
@@ -189,7 +189,7 @@ class MainWidget(QtWidgets.QWidget):
                 _data = s.recv(1024)
                 print("socket data", _data)
         except:
-            print("Socket Connect Failed")
+            print("Socket Connect Trying")
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
