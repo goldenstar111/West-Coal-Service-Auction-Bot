@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>550</width>
+    <height>336</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AutoMouseClick</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="3" column="0" colspan="2">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Difference Time between me and server(ms)</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="4">
+    <widget class="QPushButton" name="pushButton_7">
+     <property name="text">
+      <string>Difference</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2" colspan="2">
+    <widget class="QLineEdit" name="lineEdit_3"/>
+   </item>
+   <item row="8" column="4">
+    <widget class="QPushButton" name="pushButton_8">
+     <property name="text">
+      <string>Delete One</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLineEdit" name="lineEdit"/>
+   </item>
+   <item row="2" column="4">
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="text">
+      <string>Add</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3">
+    <widget class="QLineEdit" name="lineEdit_2"/>
+   </item>
+   <item row="2" column="0" colspan="4">
+    <widget class="QTimeEdit" name="timeEdit">
+     <property name="displayFormat">
+      <string>h:mm:ss:z</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Y:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" rowspan="7" colspan="4">
+    <widget class="QTableWidget" name="tableWidget">
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>140</number>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>Click Time</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Position X</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Position Y</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="5" column="4">
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>End</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="4">
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="text">
+      <string>Start</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>X:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="4">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>54</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="4">
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Capture</string>
+     </property>
+     <property name="autoDefault">
+      <bool>true</bool>
+     </property>
+     <property name="default">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="4">
+    <widget class="QPushButton" name="pushButton_6">
+     <property name="text">
+      <string>Load</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="4">
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="text">
+      <string>Save</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="4">
+    <widget class="QPushButton" name="pushButton_9">
+     <property name="text">
+      <string>Clear All</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
