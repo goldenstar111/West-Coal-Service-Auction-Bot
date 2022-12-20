@@ -3,3 +3,4 @@ bs4
 selenium
 webdriver-manager
 auto-py-to-exe
+pyautogui
